@@ -1,0 +1,4 @@
+Overlap makes each chunk repeat the last few characters of the previous one. Without it, a sentence or number cut at a boundary is split across two chunks, and search might retrieve only one half. With overlap, the cut-off part appears whole in at least one chunk.
+Each loop moves start forward by size minus overlap. If overlap equals size, the step is 0, so start never moves. If overlap is bigger, the step is negative and start goes backwards. Either way the loop never ends, so overlap must be smaller than size.
+
+The one thing which i struggled with is finding out what will happen if the overlap is bigger than the size.
